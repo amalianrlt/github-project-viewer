@@ -1,46 +1,81 @@
-# Getting Started with Create React App
+# GitHub Projects Viewer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A ReactJS application that allows users to search for a GitHub username, view their public repositories, and display the repository's README content in a nicely formatted way.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Search for GitHub Username** – Quickly search for any public GitHub profile.
+- **List User Projects** – Display the repositories owned by the searched user.
+- **View README** – Show the README content of each repository in a clean format.
+- **State Management** – Demonstrates global state handling using Redux or React Context.
+- **Component Architecture** – Structured and reusable components to reflect real production app practices.
+- **Pagination** – Limit to a maximum of 100 pages for repository listings.
 
-### `npm start`
+## Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **Framework**: ReactJS
+- **Styling**: CSS
+- **HTTP Client**: Fetch API
+- **Markdown Rendering**: `react-markdown`
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## User Flow
 
-### `npm test`
+1. **Search User**
+   - Enter a GitHub username in the search bar.
+   - Press enter or click the search button to fetch repositories.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. **View Project List**
+   - The app displays a paginated list of repositories for the user.
+   - Maximum pagination is capped at 100 pages.
 
-### `npm run build`
+3. **View README**
+   - Click a repository to load and display its README file in markdown format.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Requirements Fulfilled
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- ✅ Uses **ReactJS** as the main framework.
+- ✅ Demonstrates **component-based architecture** for scalability.
+- ✅ Shows **state management** implementation.
+- ✅ Utilizes **GitHub API** to fetch repositories and README content.
+- ✅ Displays **README in a clean format** using markdown rendering.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Setup & Installation
 
-### `npm run eject`
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/amalianrlt/github-projects-viewer.git
+   cd github-projects-viewer
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Start the development server:
+   ```bash
+   npm start
+   # or
+   yarn start
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+4. Open your browser and go to:
+   ```
+   http://localhost:3000
+   ```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## API Reference
 
-## Learn More
+- **GitHub API**:
+  - Get User Repositories: `https://api.github.com/users/{username}/repos`
+  - Get README Content: `https://api.github.com/repos/{username}/{repo}/readme`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Example
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Search for `amalianrlt` and view repository README.
+
+## License
+
+This project is for testing and demonstration purposes only.
